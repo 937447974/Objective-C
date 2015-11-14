@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabmenus>
+    <tabmenu tag="0" icon="tab_investment" icon_select="tab_investment_select" title="tab_bar_investment"/>
+    <tabmenu tag="1" icon="tab_my" icon_select="tab_my_select" title="tab_bar_my" />
+</tabmenus>
