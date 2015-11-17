@@ -19,6 +19,10 @@ int main(int argc, const char * argv[]) {
         array = [NSArray arrayWithObjects:@"阳君", dict, nil];
         dict = [NSDictionary dictionaryWithObjectsAndKeys:array, @"name", @"937447974", @"qq", nil];
         NSLog(@"%@", dict);
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:kNilOptions error:nil];
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", jsonString);
     }
     return 0;
 }
