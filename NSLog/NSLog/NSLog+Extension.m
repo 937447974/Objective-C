@@ -11,8 +11,6 @@
 
 #import "NSLog+Extension.h"
 
-#if 0
-
 #pragma mark -  NSLog打印辅助方法
 id logExtension(id obj) {
     id tempObj = obj;
@@ -60,5 +58,3 @@ id logExtension(id obj) {
 }
 
 @end
-
-#endif
