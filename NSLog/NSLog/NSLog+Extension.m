@@ -53,7 +53,10 @@ id logExtension(id obj) {
     [str appendString:@"}"];
     // 删掉最后一个,
     NSRange range = [str rangeOfString:@"," options:NSBackwardsSearch];
-    [str deleteCharactersInRange:range];
+    // 保护机制找到才删除
+    if (range.location > 0 && range.location < str.length) {
+        [str deleteCharactersInRange:range];
+    }
     return str;
 }
 
