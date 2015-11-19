@@ -46,8 +46,8 @@ id logExtension(id obj) {
 #pragma mark 字典打印
 - (NSString *)descriptionWithLocale:(id)locale {
     __block NSMutableString *str = [NSMutableString stringWithString:@"{\n"];
-    // 遍历字典的所有键值对，采用并发输出
-    [self enumerateKeysAndObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+    // 遍历字典的所有键值对
+    [self enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         [str appendFormat:@"\t%@ = %@,\n", key, logExtension(obj)];
     }];
     [str appendString:@"}"];
