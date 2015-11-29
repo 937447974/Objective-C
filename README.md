@@ -12,4 +12,4 @@
 
 #WebKit
 
-WebKit框架
+使用WebKit框架显示网页内容，实现浏览器相关特性。
