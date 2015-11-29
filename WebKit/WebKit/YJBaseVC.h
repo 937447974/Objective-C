@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  YJBaseVC.h
 //  WebKit
 //
 //  CSDN:http://blog.csdn.net/y550918116j
@@ -11,10 +11,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+/// 基础
+@interface YJBaseVC : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+/* 需求：
+ 1. 显示网页
+ 2. 和js交互
+ */
 
 @end
-

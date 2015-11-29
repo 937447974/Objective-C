@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  YJSeniorVC.h
 //  WebKit
 //
 //  CSDN:http://blog.csdn.net/y550918116j
@@ -11,10 +11,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+/** 高级*/
+@interface YJSeniorVC : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+/*
+ 需求：
+ 1.进度条
+ 2.前进、后退、刷新
+ 3.缓存操作
+ */
 
 @end
-

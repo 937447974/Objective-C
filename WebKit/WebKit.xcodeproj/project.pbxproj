@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		D475FE5E1C0AB6D00012B5FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE5D1C0AB6D00012B5FE /* main.m */; };
 		D475FE611C0AB6D00012B5FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE601C0AB6D00012B5FE /* AppDelegate.m */; };
-		D475FE641C0AB6D00012B5FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE631C0AB6D00012B5FE /* ViewController.m */; };
 		D475FE671C0AB6D00012B5FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D475FE651C0AB6D00012B5FE /* Main.storyboard */; };
 		D475FE691C0AB6D00012B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D475FE681C0AB6D00012B5FE /* Assets.xcassets */; };
 		D475FE6C1C0AB6D00012B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D475FE6A1C0AB6D00012B5FE /* LaunchScreen.storyboard */; };
 		D475FE771C0AB6D00012B5FE /* WebKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE761C0AB6D00012B5FE /* WebKitTests.m */; };
 		D475FE821C0AB6D00012B5FE /* WebKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE811C0AB6D00012B5FE /* WebKitUITests.m */; };
+		D475FE941C0ACA720012B5FE /* YJBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE931C0ACA720012B5FE /* YJBaseVC.m */; };
+		D475FE961C0ACAD20012B5FE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D475FE951C0ACAD20012B5FE /* index.html */; };
+		D475FE991C0ACF4F0012B5FE /* YJSeniorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D475FE981C0ACF4F0012B5FE /* YJSeniorVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		D475FE5D1C0AB6D00012B5FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D475FE5F1C0AB6D00012B5FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D475FE601C0AB6D00012B5FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D475FE621C0AB6D00012B5FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D475FE631C0AB6D00012B5FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D475FE661C0AB6D00012B5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D475FE681C0AB6D00012B5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D475FE6B1C0AB6D00012B5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,11 @@
 		D475FE7D1C0AB6D00012B5FE /* WebKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D475FE811C0AB6D00012B5FE /* WebKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebKitUITests.m; sourceTree = "<group>"; };
 		D475FE831C0AB6D00012B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D475FE921C0ACA720012B5FE /* YJBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJBaseVC.h; sourceTree = "<group>"; };
+		D475FE931C0ACA720012B5FE /* YJBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJBaseVC.m; sourceTree = "<group>"; };
+		D475FE951C0ACAD20012B5FE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D475FE971C0ACF4F0012B5FE /* YJSeniorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSeniorVC.h; sourceTree = "<group>"; };
+		D475FE981C0ACF4F0012B5FE /* YJSeniorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSeniorVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +108,9 @@
 			children = (
 				D475FE5F1C0AB6D00012B5FE /* AppDelegate.h */,
 				D475FE601C0AB6D00012B5FE /* AppDelegate.m */,
-				D475FE621C0AB6D00012B5FE /* ViewController.h */,
-				D475FE631C0AB6D00012B5FE /* ViewController.m */,
-				D475FE651C0AB6D00012B5FE /* Main.storyboard */,
-				D475FE681C0AB6D00012B5FE /* Assets.xcassets */,
-				D475FE6A1C0AB6D00012B5FE /* LaunchScreen.storyboard */,
-				D475FE6D1C0AB6D00012B5FE /* Info.plist */,
+				D475FE8F1C0AC9FA0012B5FE /* ViewController */,
+				D475FE901C0ACA020012B5FE /* View */,
+				D475FE911C0ACA0E0012B5FE /* Resources */,
 				D475FE5C1C0AB6D00012B5FE /* Supporting Files */,
 			);
 			path = WebKit;
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				D475FE5D1C0AB6D00012B5FE /* main.m */,
+				D475FE6D1C0AB6D00012B5FE /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +141,35 @@
 				D475FE831C0AB6D00012B5FE /* Info.plist */,
 			);
 			path = WebKitUITests;
+			sourceTree = "<group>";
+		};
+		D475FE8F1C0AC9FA0012B5FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D475FE921C0ACA720012B5FE /* YJBaseVC.h */,
+				D475FE931C0ACA720012B5FE /* YJBaseVC.m */,
+				D475FE971C0ACF4F0012B5FE /* YJSeniorVC.h */,
+				D475FE981C0ACF4F0012B5FE /* YJSeniorVC.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D475FE901C0ACA020012B5FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D475FE651C0AB6D00012B5FE /* Main.storyboard */,
+				D475FE6A1C0AB6D00012B5FE /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D475FE911C0ACA0E0012B5FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D475FE681C0AB6D00012B5FE /* Assets.xcassets */,
+				D475FE951C0ACAD20012B5FE /* index.html */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +234,7 @@
 		D475FE511C0AB6D00012B5FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YJ;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "阳君";
 				TargetAttributes = {
@@ -245,6 +278,7 @@
 			files = (
 				D475FE6C1C0AB6D00012B5FE /* LaunchScreen.storyboard in Resources */,
 				D475FE691C0AB6D00012B5FE /* Assets.xcassets in Resources */,
+				D475FE961C0ACAD20012B5FE /* index.html in Resources */,
 				D475FE671C0AB6D00012B5FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D475FE641C0AB6D00012B5FE /* ViewController.m in Sources */,
+				D475FE941C0ACA720012B5FE /* YJBaseVC.m in Sources */,
 				D475FE611C0AB6D00012B5FE /* AppDelegate.m in Sources */,
 				D475FE5E1C0AB6D00012B5FE /* main.m in Sources */,
+				D475FE991C0ACF4F0012B5FE /* YJSeniorVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +531,7 @@
 				D475FE881C0AB6D00012B5FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D475FE891C0AB6D00012B5FE /* Build configuration list for PBXNativeTarget "WebKitTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +540,7 @@
 				D475FE8B1C0AB6D00012B5FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D475FE8C1C0AB6D00012B5FE /* Build configuration list for PBXNativeTarget "WebKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +549,7 @@
 				D475FE8E1C0AB6D00012B5FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
