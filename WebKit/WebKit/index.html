@@ -35,12 +35,39 @@
 
     // 点击确定按钮
     function onClickButton() {
-        app.jsCallOC(input.value); // JS通知UIWebView
+        // 复杂数据
+        var list = [1,2,3];
+        var dict = {"name":"阳君", "qq":"937447974", "data":input.value, "list":list};
+        alert(dict);
+        // JS通知WKWebView
+        window.webkit.messageHandlers.jsCallOC.postMessage(dict);
     }
 
-    // UIWebView调用JS
+    // WKWebView调用JS
     function ocCallJS(params) {
         show.innerHTML = params;
+    }
+
+    // alert对话框
+    function ale() {
+        alert("这是一个警告对话框！");
+    }
+
+    // confirm选择框
+    function firm() {
+        if(confirm("去百度看看？")) {
+            alert("你选择了去！");
+        } else {
+            alert("你选择了不去！");
+        }
+    }
+
+    // prompt输入框
+    function prom() {
+        var result = prompt("演示一个带输入的对话框", "这里输入你的信息");
+        if(result) {
+            alert("谢谢使用，你输入的是：" + result)
+        }
     }
 </script>
 </head>
@@ -49,9 +76,13 @@
     <section>
         <div class="div">
             <input type="text" id="input" style="width:150px;line-height:30px">
-            <a style="margin-left:10px;width:50px;line-height:30px;display:inline-block;background-color:blue;color:#fff;text-align:center;" id="button" >按钮</a>
+            <a style="margin-left:10px;width:50px;line-height:30px;display:inline-block;background-color:blue;color:#fff;text-align:center;" id="button" >确定</a>
             <br>
             <span id="show" style="display:inline-block;width:100%;text-align:left;font-size:18px;font-family:'微软雅黑';color:#000;margin-top:20px;" ></span>
+            <br><br>
+            <input type="submit" value="警告框" onclick="ale()" />
+            <input type="submit" value="选择框" style="margin-left:20px;" onclick="firm()" />
+            <input type="submit" value="输入框" style="margin-left:20px;" onclick="prom()" />
             </div>
     </section>
     <script type="text/javascript">
