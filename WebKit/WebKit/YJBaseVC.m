@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // js配置
     WKUserContentController *userContentController = [[WKUserContentController alloc] init];
     [userContentController addScriptMessageHandler:self name:@"jsCallOC"];
     
@@ -30,9 +31,10 @@
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = userContentController;
     
+    // 显示网页
     self.webView = [[WKWebView alloc] initWithFrame:self.view.frame  configuration:configuration];
     [self.view addSubview:self.webView];
-    
+    // 设置WKUIDelegate代理
     self.webView.UIDelegate = self;
     
     // 找到index.html的路径
@@ -73,13 +75,13 @@
 #pragma mark - WKUIDelegate
 #pragma mark 新建webView
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
-     NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__FUNCTION__);
     return webView;
 }
 
 #pragma mark 关闭webView
 - (void)webViewDidClose:(WKWebView *)webView {
-     NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__FUNCTION__);
 }
 
 #pragma mark alert弹出框
@@ -105,7 +107,7 @@
 
 #pragma mark Confirm选择框
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(nonnull NSString *)message initiatedByFrame:(nonnull WKFrameInfo *)frame completionHandler:(nonnull void (^)(BOOL))completionHandler {
-     NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__FUNCTION__);
     // 按钮
     UIAlertAction *alertActionCancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         // 返回用户选择的信息
@@ -123,7 +125,7 @@
 
 #pragma mark TextInput输入框
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(nonnull NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(nonnull WKFrameInfo *)frame completionHandler:(nonnull void (^)(NSString * _Nullable))completionHandler {
-     NSLog(@"%s",__FUNCTION__);
+    NSLog(@"%s",__FUNCTION__);
     // alert弹出框
     __block UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:nil preferredStyle:UIAlertControllerStyleAlert];
     // 输入框
