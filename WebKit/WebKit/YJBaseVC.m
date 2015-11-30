@@ -26,7 +26,11 @@
     // js配置
     WKUserContentController *userContentController = [[WKUserContentController alloc] init];
     [userContentController addScriptMessageHandler:self name:@"jsCallOC"];
-    
+    // js注入，注入一个ale方法，会显示一个弹出框。
+    NSString *javaScriptSource = @"function ale() { alert(\"WKUserScript注入js\");}";
+    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:javaScriptSource injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];// forMainFrameOnly:NO(全局窗口)，yes（只限主窗口）
+    [userContentController addUserScript:userScript];
+
     // WKWebView的配置
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = userContentController;
@@ -85,14 +89,6 @@
 }
 
 #pragma mark alert弹出框
-/**
- *  web界面中有弹出警告框时调用
- *
- *  @param webView           实现该代理的webview
- *  @param message           警告框中的内容
- *  @param frame             主窗口
- *  @param completionHandler 警告框消失调用
- */
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"%s",__FUNCTION__);
     // 确定按钮
@@ -127,7 +123,7 @@
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(nonnull NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(nonnull WKFrameInfo *)frame completionHandler:(nonnull void (^)(NSString * _Nullable))completionHandler {
     NSLog(@"%s",__FUNCTION__);
     // alert弹出框
-    __block UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:nil preferredStyle:UIAlertControllerStyleAlert];
     // 输入框
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = defaultText;
