@@ -23,27 +23,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // js配置
-    WKUserContentController *userContentController = [[WKUserContentController alloc] init];
-    [userContentController addScriptMessageHandler:self name:@"jsCallOC"];
-    // js注入，注入一个ale方法，会显示一个弹出框。
-    NSString *javaScriptSource = @"function ale() { alert(\"WKUserScript注入js\");}";
-    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:javaScriptSource injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];// forMainFrameOnly:NO(全局窗口)，yes（只限主窗口）
-    [userContentController addUserScript:userScript];
+    //    [self loadWebView]; // 加载测试
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest]; // 加载页面
+}
 
-    // WKWebView的配置
-    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-    configuration.userContentController = userContentController;
+#pragma mark - get方法
+- (WKWebView *)webView {
+    if (_webView == nil) {
+        // js配置
+        WKUserContentController *userContentController = [[WKUserContentController alloc] init];
+        [userContentController addScriptMessageHandler:self name:@"jsCallOC"];
+        // js注入，注入一个alert方法，页面加载完毕弹出一个对话框。
+        NSString *javaScriptSource = @"alert(\"WKUserScript注入js\");";
+        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:javaScriptSource injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];// forMainFrameOnly:NO(全局窗口)，yes（只限主窗口）
+        [userContentController addUserScript:userScript];
+        
+        // WKWebView的配置
+        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+        configuration.userContentController = userContentController;
+        
+        // 显示WKWebView
+        _webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:configuration];
+        _webView.UIDelegate = self; // 设置WKUIDelegate代理
+        [self.view addSubview:_webView];
+    }
+    return _webView;
+}
+
+#pragma mark webView 加载测试
+- (void)loadWebView {
     
-    // 显示网页
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame  configuration:configuration];
-    [self.view addSubview:self.webView];
-    // 设置WKUIDelegate代理
-    self.webView.UIDelegate = self;
+    // 1. - (nullable WKNavigation *)loadRequest:(NSURLRequest *)request;
+    // 网页路径
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest]; // 加载页面
+    
+    /* 解决页面无法显示的问题
+     info.plist 增加如下代码
+     <key>NSAppTransportSecurity</key>
+     <dict>
+     <key>NSAllowsArbitraryLoads</key>
+     <true/>
+     </dict>
+     */
     
     // 找到index.html的路径
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url]; // url的位置
+    url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    urlRequest = [NSURLRequest requestWithURL:url]; // url的位置
     [self.webView loadRequest:urlRequest]; // 加载页面
 }
 
