@@ -54,11 +54,14 @@
 
 #pragma mark webView 加载测试
 - (void)loadWebView {
+    // 本地html页面
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url]; // url的位置
+    [self.webView loadRequest:urlRequest]; // 加载页面
     
-    // 1. - (nullable WKNavigation *)loadRequest:(NSURLRequest *)request;
     // 网页路径
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    url = [NSURL URLWithString:@"https://www.baidu.com"];
+    urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest]; // 加载页面
     
     /* 解决页面无法显示的问题
@@ -69,11 +72,6 @@
      <true/>
      </dict>
      */
-    
-    // 找到index.html的路径
-    url = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
-    urlRequest = [NSURLRequest requestWithURL:url]; // url的位置
-    [self.webView loadRequest:urlRequest]; // 加载页面
 }
 
 #pragma mark - WKScriptMessageHandler
