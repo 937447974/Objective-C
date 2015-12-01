@@ -31,8 +31,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // 导航按钮
+    [self initUIBarButtonItem];
+    // 进度条监视
+    NSLog(@"%f", self.webView.estimatedProgress); // 防止苹果改变属性名时，项目不报错。故这里先打印。
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    // 刷新界面
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:urlRequest]; // 加载页面
+}
+
+#pragma mark 初始化UIBar导航按钮
+- (void)initUIBarButtonItem {
     // 左边
     self.goBackBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(goBack:)];
     self.goBackBarButtonItem.enabled = NO; // 不可点
@@ -43,14 +53,6 @@
     UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchBackForwardList:)];
     UIBarButtonItem *reloadItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:reloadItem, searchItem, nil];
-    
-    // 进度条监视
-    NSLog(@"%f", self.webView.estimatedProgress); // 防止苹果改变属性名时，项目不报错。故这里先打印。
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
-    // 刷新界面
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:urlRequest]; // 加载页面
 }
 
 #pragma mark - get方法
