@@ -28,7 +28,6 @@
 
 @implementation YJSeniorVC
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUIBarButtonItem];
