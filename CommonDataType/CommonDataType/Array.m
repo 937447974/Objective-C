@@ -20,16 +20,16 @@ NSInteger sortByFunction(NSString * obj1, NSString * obj2, void * context) {
     
     self = [super init];
     if (self) {
-//        [self testCreating]; // 创建
-//        [self testInitializing]; // 初始化
-//        [self testQuerying]; // 查询
-//        [self testFindingObjects]; //查找对象位置
-//        [self testSendingMessagesToElements]; // 每个元素发送消息
-//        [self testComparing]; // 数组比较
-//        [self testDerivingNewArrays]; // 生成新数组
-//        [self testSorting]; // 排序
-//        [self testWorkingWithStringElements]; // 处理字符串数组
-//        [self testCreatingDescription]; // 存储
+        [self testCreating]; // 创建
+        [self testInitializing]; // 初始化
+        [self testQuerying]; // 查询
+        [self testFindingObjects]; //查找对象位置
+        [self testSendingMessagesToElements]; // 每个元素发送消息
+        [self testComparing]; // 数组比较
+        [self testDerivingNewArrays]; // 生成新数组
+        [self testSorting]; // 排序
+        [self testWorkingWithStringElements]; // 处理字符串数组
+        [self testCreatingDescription]; // 存储
     }
     return self;
     

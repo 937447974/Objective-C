@@ -1,4 +1,4 @@
-//
+
 //  String.m
 //  CommonDataType
 //
@@ -14,24 +14,24 @@
     
     self = [super init];
     if (self) {
-//        [self testCreatingAndInitializingStrings]; // 初始化字符串
-//        [self testCreatingAndInitializingFromFile]; // 通过NSString路径读取文件内容
-//        [self testCreatingAndInitializingFromURL]; // 通过NSURL路径读取文件内容
-//        [self testWritingFileOrURL]; // 写入
-//        [self testGettingLength]; // 获取字符串长度
-//        [self testGettingCharactersAndBytes]; // 获取Characters和Bytes
-//        [self testGettingCStrings]; // 获取C字符串
-//        [self testCombiningStrings]; // 增加字符串
-//        [self testDividingStrings]; // 分割字符串
-//        [self testFindingCharactersAndSubstrings]; // 查找字符串
-//        [self testReplacingSubstrings]; // 替换字符串
-//        [self testIdentifyingAndComparingStrings]; // 识别和比较字符串
-//        [self testFoldingStrings]; // 字符串折叠
-//        [self testGettingSharedPrefix]; // 获得共享的前缀
-//        [self testChangingCase]; // 大小写变化
-//        [self testGettingNumericValues]; // 得到数值
-//        [self testWorkingWithPaths]; // 使用路径
-//        [self testWorkingWithURLs]; // 使用URL
+        [self testCreatingAndInitializingStrings]; // 初始化字符串
+        [self testCreatingAndInitializingFromFile]; // 通过NSString路径读取文件内容
+        [self testCreatingAndInitializingFromURL]; // 通过NSURL路径读取文件内容
+        [self testWritingFileOrURL]; // 写入
+        [self testGettingLength]; // 获取字符串长度
+        [self testGettingCharactersAndBytes]; // 获取Characters和Bytes
+        [self testGettingCStrings]; // 获取C字符串
+        [self testCombiningStrings]; // 增加字符串
+        [self testDividingStrings]; // 分割字符串
+        [self testFindingCharactersAndSubstrings]; // 查找字符串
+        [self testReplacingSubstrings]; // 替换字符串
+        [self testIdentifyingAndComparingStrings]; // 识别和比较字符串
+        [self testFoldingStrings]; // 字符串折叠
+        [self testGettingSharedPrefix]; // 获得共享的前缀
+        [self testChangingCase]; // 大小写变化
+        [self testGettingNumericValues]; // 得到数值
+        [self testWorkingWithPaths]; // 使用路径
+        [self testWorkingWithURLs]; // 使用URL
         
     }
     return self;
@@ -178,7 +178,7 @@
     NSLog(@"%d", gByte);
     
     // 有问题
-    [string getCharacters:&uch range:range];
+    //[string getCharacters:&uch range:range];
     
 }
 

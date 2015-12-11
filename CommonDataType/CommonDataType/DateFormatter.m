@@ -14,12 +14,12 @@
     
     self = [super init];
     if (self) {
-//        [self testConvertingObjects];
-//        [self testManagingAMAndPMSymbols];
-//        [self testManagingWeekdaySymbols];
-//        [self testManagingMonthSymbols];
-//        [self testManagingQuarterSymbols];
-//        [self testManagingEraSymbols];
+        [self testConvertingObjects];
+        [self testManagingAMAndPMSymbols];
+        [self testManagingWeekdaySymbols];
+        [self testManagingMonthSymbols];
+        [self testManagingQuarterSymbols];
+        [self testManagingEraSymbols];
     }
     return self;
     

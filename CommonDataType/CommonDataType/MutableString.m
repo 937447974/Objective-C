@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-//        [self testCreatingAndInitializing];
-//        [self testModifying];
+        [self testCreatingAndInitializing];
+        [self testModifying];
     }
     return self;
 }

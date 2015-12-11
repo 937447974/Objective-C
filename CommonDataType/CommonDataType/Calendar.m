@@ -14,17 +14,17 @@
     
     self = [super init];
     if (self) {
-//        [self testSystemLocaleInformation]; //系统语言环境
-//        [self testCreatingAndInitializing]; // 初始化
-//        [self testGettingInformation];      // 获取重要信息
-//        [self testCalendricalCalculations]; // 日历计算
-//        [self testComparing];               // 时间比较
-//        [self testExtractingComponents];    // 提取组件
-//        [self testAMAndPMSymbols]; // 上午下午符号
-//        [self testWeekdaySymbols]; // < 周符号
-//        [self testMonthSymbols];   // 月符号
-//        [self testQuarterSymbols]; // 季度符号
-//        [self testEraSymbols];     // 公元前、公元符号
+        [self testSystemLocaleInformation]; //系统语言环境
+        [self testCreatingAndInitializing]; // 初始化
+        [self testGettingInformation];      // 获取重要信息
+        [self testCalendricalCalculations]; // 日历计算
+        [self testComparing];               // 时间比较
+        [self testExtractingComponents];    // 提取组件
+        [self testAMAndPMSymbols]; // 上午下午符号
+        [self testWeekdaySymbols]; // < 周符号
+        [self testMonthSymbols];   // 月符号
+        [self testQuarterSymbols]; // 季度符号
+        [self testEraSymbols];     // 公元前、公元符号
     }
     return self;
     

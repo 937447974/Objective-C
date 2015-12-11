@@ -14,12 +14,12 @@
     
     self = [super init];
     if (self) {
-//        [self testCreatingAndInitializing]; // 初始化
-//        [self testGettingTemporalBoundaries]; // 时间边界
-//        [self testComparing]; // 时间比较
-//        [self testGettingTimeIntervals]; // 时间间隔
-//        [self testAddingTimeInterval]; // 添加一个时间间隔
-//        [self testRepresentingDatesAsStrings];
+        [self testCreatingAndInitializing]; // 初始化
+        [self testGettingTemporalBoundaries]; // 时间边界
+        [self testComparing]; // 时间比较
+        [self testGettingTimeIntervals]; // 时间间隔
+        [self testAddingTimeInterval]; // 添加一个时间间隔
+        [self testRepresentingDatesAsStrings];
     }
     return self;
 }

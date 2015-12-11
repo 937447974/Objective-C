@@ -15,16 +15,16 @@
     self = [super init];
     if (self) {
         // NSDictionary测试
-//        [self testCreating]; // 创建字典(+)
-//        [self testInitializing]; // 初始化字典(-)
-//        [self testCountingEntries]; // 计算个数
-//        [self testComparingDictionaries]; // 字典比较
-//        [self testAccessingKeysAndValues];  // 访问键和值
-//        [self testEnumerating];             // 遍历
-//        [self testSorting]; // 排序
-//        [self testFiltering]; // 过滤
-//        [self testStoring]; // 存储
-//        [self testAccessingFileAttributes]; // 访问文件属性
+        [self testCreating]; // 创建字典(+)
+        [self testInitializing]; // 初始化字典(-)
+        [self testCountingEntries]; // 计算个数
+        [self testComparingDictionaries]; // 字典比较
+        [self testAccessingKeysAndValues];  // 访问键和值
+        [self testEnumerating];             // 遍历
+        [self testSorting]; // 排序
+        [self testFiltering]; // 过滤
+        [self testStoring]; // 存储
+        [self testAccessingFileAttributes]; // 访问文件属性
     }
     return self;
     

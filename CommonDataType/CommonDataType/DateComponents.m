@@ -14,9 +14,9 @@
     
     self = [super init];
     if (self) {
-//        [self testGettingDateValue];
-//        [self testValidatingDateValue]; // 验证日期值
-//        [self testDateComponents];// 日期组件
+        [self testGettingDateValue];
+        [self testValidatingDateValue]; // 验证日期值
+        [self testDateComponents];// 日期组件
     }
     return self;
     

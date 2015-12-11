@@ -14,12 +14,12 @@
 {
     self = [super init];
     if (self) {
-//        [self testCreating]; // 创建Set
-//        [self testInit];     // 初始化Set
-//        [self testCountingEntries]; // 计算条目
-//        [self testAccessingSetMembers]; // 访问成员变量
-//        [self testComparingSets]; // 比较set
-//        [self testSorting]; // 排序
+        [self testCreating]; // 创建Set
+        [self testInit];     // 初始化Set
+        [self testCountingEntries]; // 计算条目
+        [self testAccessingSetMembers]; // 访问成员变量
+        [self testComparingSets]; // 比较set
+        [self testSorting]; // 排序
     }
     return self;
 }

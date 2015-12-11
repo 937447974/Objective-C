@@ -31,13 +31,13 @@
     [super viewDidLoad];
     
     id obj;
-    
+#if 0
     obj = [[Dictionary alloc] init];
     obj = [[MutableDictionary alloc] init];
     
     obj = [[Array alloc] init];
     obj = [[MutableArray alloc] init];
-    
+
     obj = [[Date alloc] init];
     obj = [[DateFormatter alloc] init];
     obj = [[Calendar alloc] init];
@@ -45,7 +45,7 @@
     
     obj = [[String alloc] init];
     obj = [[MutableString alloc] init];
-    
+#endif
     obj = [[Set alloc] init];
     obj = [[MutableSet alloc] init];
     

@@ -19,12 +19,12 @@ NSInteger mSortByFunction(NSString * obj1, NSString * obj2, void * context) {
     
     self = [super init];
     if (self) {
-//        [self testCreatingAndInitializing];
-//        [self testAdding];
-//        [self testRemoving];
-//        [self testReplacing]; // 对象替换
-//        [self testFiltering]; // 过滤
-//        [self testSorting]; // 排序
+        [self testCreatingAndInitializing];
+        [self testAdding];
+        [self testRemoving];
+        [self testReplacing]; // 对象替换
+        [self testFiltering]; // 过滤
+        [self testSorting]; // 排序
     }
     return self;
     

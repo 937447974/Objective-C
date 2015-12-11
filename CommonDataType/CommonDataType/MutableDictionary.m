@@ -14,9 +14,9 @@
     
     self = [super init];
     if (self) {
-//        [self testCreatingAndInitializing]; // 初始化
-//        [self testAddingEntries];           // 增加
-//        [self testRemovingEntries];         // 删除记录
+        [self testCreatingAndInitializing]; // 初始化
+        [self testAddingEntries];           // 增加
+        [self testRemovingEntries];         // 删除记录
     }
     return self;
 }
