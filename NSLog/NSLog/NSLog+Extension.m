@@ -21,6 +21,8 @@ id logExtension(id obj) {
         NSString *str = [NSString stringWithFormat:@"%@", obj];
         str = [str stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"];
         tempObj = str;
+    } else if ([obj isKindOfClass:[NSString class]]) { // NSString类型数据加双引号
+        tempObj = [NSString stringWithFormat:@"\"%@\"", obj];
     }
     return tempObj;
 }
@@ -41,6 +43,7 @@ id logExtension(id obj) {
 }
 
 @end
+
 
 #pragma mark - 字典NSLog打印扩展
 @implementation NSDictionary (NSLogExtension)
@@ -63,6 +66,7 @@ id logExtension(id obj) {
 }
 
 @end
+
 
 #pragma mark - NSSet NSLog打印扩展
 @implementation NSSet (NSLogExtension)
