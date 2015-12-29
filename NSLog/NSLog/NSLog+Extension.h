@@ -20,3 +20,8 @@
 @interface NSDictionary (NSLogExtension)
 
 @end
+
+/** NSSet打印扩展*/
+@interface NSSet (NSLogExtension)
+
+@end
