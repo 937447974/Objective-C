@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     //    [self testCreatingFileManager];                          // 创建NSFileManager
-    //    [self testLocatingSystemDirectories];                    // 获取系统目录
+        [self testLocatingSystemDirectories];                    // 获取系统目录
     //    [self testLocatingApplicationGroupContainerDirectories]; // 定位应用程序组容器目录
     //    [self testDiscoveringDirectoryContents];                 // 目录内容
     //    [self testCreatingAndDeletingItems];                     // 创建和删除项目
